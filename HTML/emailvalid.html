@@ -1,0 +1,24 @@
+<html>  
+<title>email validation</title>  
+    <script language="JavaScript" type="text/javascript">  
+    // Validate Email .
+    function validateEmail(email){  
+ 
+    var reg = /^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/;
+      if (reg.test(email)) {   
+       document.getElementById("errorDiv").innerHTML = "This email is valid.";
+      }else{  
+       document.getElementById("errorDiv").innerHTML = "This email is not valid.";
+      }  
+    }  
+    </script>  
+    <table>
+    <tr><td>
+    <input type="text" id="email" name="email"  />   
+    <input type="button" onclick="validateEmail(email.value);" value="check Email" /><br/>
+    <div id="errorDiv"/>  
+
+     </td>    
+    </tr>
+    </table>
+</html>

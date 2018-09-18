@@ -1,0 +1,80 @@
+<html>
+	<head>
+			<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+			<ul>
+					<li><a class="active" href="home.html">Home</a></li>
+					<li><a href="#news">Register</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#about">About</a></li>
+			</ul>
+
+<form name="myform" action="nextpage.php" onsubmit="return pass_validation()" style="border:1px solid #ccc">
+	<h1 style="color:blue;">Sign Up</h1>
+    <p class="ex">Please fill in this form to create an account.</p>
+    <hr>
+    E-mail: <input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+    
+	<br>
+	Password:
+    <input type="password" id="psw" placeholder="Enter Password" name="password" required>
+	<br>
+	<label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+	<br>
+	
+		<p class="ex"><b>Enter your Birthdate</b></p>
+		<input type="date" name="bday" required>
+	  
+	<p class="ex"><b>Select your Gender</b></p>
+	<label class="radioinput" for="gender"></label>
+		<input type="radio" name="gender" value="male" >Male<br>
+		<input type="radio" name="gender" value="female"  >Female<br>
+		<input type="radio" name="gender" value="other">Other<br>
+	<label for="location"><b>Enter Cities you are interested in job</b></label>
+	<input type="text" placeholder="location" name="locn" required>
+	<br>
+	<p class="ex">Enter your field for job:</p>
+	<select>
+		<option value="it">IT</option>
+		<option value="extc">Electronics and telecommunication</option>
+		<option value="etrx">Electronics</option>
+		<option value="sm">Sales and Marketing</option>
+		<option value="pf">Professor</option>
+		<option value="acc">Accountant</option>
+	</select>
+	
+	<p class="ex">Upload your resume:</p><input type="file" name="myFile" required>
+		
+	  
+	  <p class="ex">Rate yourself out of 10 in your field of interest:</p>
+	  <input type="range" name="points" min="0" max="10" required >  
+	<p class="ex">By creating an account you agree to our Terms & Privacy.</p>  
+	    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me<br>
+    </label>
+    <input type="submit" value="submit">  
+    </form>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myEmail").pattern;
+            }
+        function pass_validation()
+        {  
+                var password=document.getElementById("psw").value;  
+  
+                if (password==null || password=="")
+                {  
+                    alert("password can't be blank");  
+                    return false;  
+                }
+                else if(password.length<8)
+                {  
+                alert("Password must be at least 8 characters long.");  
+                    return false;  
+                }  
+        }
+    </script>
+</body>
+</html>
