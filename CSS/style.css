@@ -1,4 +1,4 @@
-ul {
+                ul {
 						list-style-type: none;
 						margin: 0;
 						padding: 0;
@@ -33,7 +33,7 @@ ul {
                         background-color:blueviolet;
                         border: none;
                         color: white;
-                        padding: 15px 32px;
+                        padding: 10px 28px;
                         text-align: center;
                         text-decoration: none;
                         display: inline-block;
@@ -51,10 +51,22 @@ ul {
                         border: none;
                         background: #b4adf5;
                       }
-                      label {
+                      label.la {
                         cursor: pointer;
                         color: rgb(16, 62, 148);
                         display: block;
                         padding: 1px;
                         margin: 1px;
+                    }
+                    #panel, #flip 
+                    {
+                    padding: 5px;
+                        text-align: center;
+                        background-color: #e5eecc;
+                        border: solid 1px #c3c3c3;
+                    }
+
+                    #panel {
+                        padding: 50px;
+                        display: none;
                     }
